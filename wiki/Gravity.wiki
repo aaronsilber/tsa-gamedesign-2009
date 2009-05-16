@@ -1,0 +1,15 @@
+#summary What's Earth's gravity effect like on directly upward objects?
+
+= Request =
+
+Can anyone please do some tiny research on a method for simply modeling gravity, the curve of deceleration, etc.
+
+We should delegate like, researchers for this.
+
+= Details =
+
+If you jump, gravity is constantly pulling on you at 1 g. You lose energy until you reach your highest point (weightless) and begin to be pulled back down by gravity.
+
+= Further Research =
+
+Please fill in here the actual math/etc.
