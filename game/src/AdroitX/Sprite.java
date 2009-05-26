@@ -9,10 +9,10 @@ import java.awt.Image;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 import javax.imageio.ImageIO;
 
-import sun.security.util.Debug;
 
 /**
  * @author aj
@@ -28,14 +28,20 @@ public class Sprite extends Component {
 	private Boolean anchored = false;
 	private static final long serialVersionUID = -8777748656612457715L;
     
-	public Sprite(String graphicFile, Point initialPosition, Boolean isAnchored)
+	public void setAnchored(Boolean anchored) {
+		this.anchored = anchored;
+	}
+	public Boolean getAnchored() {
+		return anchored;
+	}
+	public Sprite(String graphicFile, Point initialPosition, Boolean isAnchored) throws FileNotFoundException
 	{
 		try
 		{
 			File file = new File(graphicFile);
 			image = ImageIO.read(file);
 			currentPosition = initialPosition;
-			anchored = isAnchored;
+			setAnchored(isAnchored);
 			this.repaint();
 		}
 		catch (Exception ex)
@@ -49,7 +55,7 @@ public class Sprite extends Component {
 		{
 			image = this.image;
 			currentPosition = initialPosition;
-			anchored = isAnchored;
+			setAnchored(isAnchored);
 			this.repaint();
 		}
 		catch (Exception ex)
@@ -57,8 +63,5 @@ public class Sprite extends Component {
 			
 		}
 	}
-	public void paint(Graphics g) {
-		System.out.println("I was redrawn!");
-        g.drawImage(image, currentPosition.x, currentPosition.y, null); // see javadoc for more info on the parameters
-    }
+
 }
