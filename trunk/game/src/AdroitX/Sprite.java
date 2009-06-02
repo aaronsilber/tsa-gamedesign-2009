@@ -43,6 +43,7 @@ public class Sprite extends Component {
 			currentPosition = initialPosition;
 			setAnchored(isAnchored);
 			this.repaint();
+			this.setFocusTraversalKeysEnabled(false);
 		}
 		catch (Exception ex)
 		{
@@ -57,6 +58,7 @@ public class Sprite extends Component {
 			currentPosition = initialPosition;
 			setAnchored(isAnchored);
 			this.repaint();
+			this.setFocusTraversalKeysEnabled(false);
 		}
 		catch (Exception ex)
 		{
