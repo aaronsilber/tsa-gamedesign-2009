@@ -14,7 +14,8 @@ private Font huge = new Font("sans-serif", 24, Font.PLAIN);
 		g.drawString(fps + " fps", 10, 20);
 		if (devMode == true)
 		{
-			g.drawString("devMode enabled! stats:", 10, 35);
+			g.setColor(new Color(0, 0, 0, 120));
+			g.drawString("DevMode enabled - Advanced Users Only", 300,300);
 			g.drawString("[ctrl]+[g] gravity: " + physics.getGravityEnabled() + ", " + physics.getGravityForce() + " g" , 10, 50);
 			g.drawString("[ctrl]+[c] collisions: " + physics.getCollisionsEnabled(), 10, 65);
 			g.drawString("total sprite count: " + paintSurface.window.getComponentCount(), 10, 80);
@@ -22,6 +23,7 @@ private Font huge = new Font("sans-serif", 24, Font.PLAIN);
 			g.drawString("uptime: " + Long.toString(System.currentTimeMillis() - paintSurface.startTime ), 10, 110);
 			g.drawString("[ctrl]+[p] physics enabled: " + physics.getEnabled(), 10, 125);
 			g.drawString("Problems? call 315-849-3324", 10, 140);
+			g.setColor(Color.black);
 		}
     }
 	public static void setFps(int fps) {
@@ -32,7 +34,6 @@ private Font huge = new Font("sans-serif", 24, Font.PLAIN);
 	}
 	public void setdevMode(Boolean devMode) {
 		HUD.devMode = devMode;
-		
 	}
 	public Boolean getdevMode() {
 		return devMode;
