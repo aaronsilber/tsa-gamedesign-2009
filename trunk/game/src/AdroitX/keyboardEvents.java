@@ -7,8 +7,6 @@ public class keyboardEvents implements java.awt.KeyEventDispatcher {
 	@Override
 	public boolean dispatchKeyEvent(KeyEvent event) {
 		// TODO Auto-generated method stub
-		System.out.println("keyboard event fired:");
-		System.out.println(event.getKeyCode()); //68 is "d"
 		if (System.currentTimeMillis() - lastHit > 300)
 		{
 		if (event.isControlDown() && event.isShiftDown() && event.getKeyCode() == 68)
