@@ -10,6 +10,10 @@ public class gravity extends Component {
 	 */
 	private static final long serialVersionUID = -7318788957739210667L;
 
+	public static void refreshGravity()
+	{
+		
+	}
 	void testGravity()
 	{
 		Sprite[] sprites = AdroitX.paintSurface.getSprites();

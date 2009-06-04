@@ -22,7 +22,7 @@ private Font huge = new Font("sans-serif", 24, Font.PLAIN);
 			g.drawString("camera position: " + camera.getCameraPosition().toString(), 10, 95);
 			g.drawString("uptime: " + Long.toString(System.currentTimeMillis() - paintSurface.startTime ), 10, 110);
 			g.drawString("[ctrl]+[p] physics enabled: " + physics.getEnabled(), 10, 125);
-			g.drawString("Problems? call 315-849-3324", 10, 140);
+			g.drawString("Problems? Press [ctrl]+[h] to call Mr. Programmer himself over Skype!", 10, 550);
 			g.setColor(Color.black);
 		}
     }
