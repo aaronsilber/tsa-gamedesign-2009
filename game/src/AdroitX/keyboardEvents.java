@@ -1,6 +1,10 @@
 package AdroitX;
 
+import java.awt.Desktop;
 import java.awt.event.KeyEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public class keyboardEvents implements java.awt.KeyEventDispatcher {
 	private static long lastHit = 0;
@@ -29,6 +33,10 @@ public class keyboardEvents implements java.awt.KeyEventDispatcher {
 				if (event.getKeyCode() == 71)
 				{
 					physics.setGravityEnabled(!physics.getGravityEnabled());
+				}
+				if (event.getKeyCode() == 72)
+				{
+						paintSurface.callAaron();
 				}
 			}
 		}

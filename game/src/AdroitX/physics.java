@@ -30,5 +30,8 @@ public static int getGravityForce() {
 	return gravityForce;
 }
 
-
+public static void refreshPhysics()
+{
+	
+}
 }
