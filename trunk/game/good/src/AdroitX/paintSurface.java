@@ -37,6 +37,7 @@ public static JFrame window = new JFrame("DeWitt's Awesome Game"); //initialize 
 	}
 	static void loadMap(String mapFile)
 	{
+		//loop through sprite elements, adding sprites
 		//load elements
 	}
 	public static void main(String[] args) {
@@ -55,21 +56,17 @@ public static JFrame window = new JFrame("DeWitt's Awesome Game"); //initialize 
 		{
 			long stopTime = 0;
 			long startTime = System.currentTimeMillis();
-			stopTime = System.currentTimeMillis();
-			long usedTime = stopTime - startTime;
 			try {
 				physics.refreshPhysics();
 				gravity.refreshGravity();
 				camera.optimize();
 				window.repaint();
+				stopTime = System.currentTimeMillis();
+				long usedTime = stopTime - startTime;
 				long waitTime = 1000 / wantedFPS - usedTime;
 				if (waitTime > 0)
 				{
-					Thread.sleep(1000 / wantedFPS - usedTime);
-				}
-				else
-				{
-					System.out.println("used too much time so i didn't wait...");
+					Thread.sleep(waitTime);
 				}
 			}
 			catch (Exception ex)
