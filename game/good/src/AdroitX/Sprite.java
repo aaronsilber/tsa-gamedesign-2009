@@ -24,7 +24,8 @@ public class Sprite extends Component {
 	 * 
 	 */
 	private BufferedImage image;
-	private Point currentPosition = new Point(0,0);
+	private String id = "";
+	private Boolean collides = true;
 	private Boolean anchored = false;
 	private static final long serialVersionUID = -8777748656612457715L;
     
